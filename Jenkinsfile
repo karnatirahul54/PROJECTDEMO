@@ -15,19 +15,19 @@ pipeline {
 		
 		stage('Build') {
             steps {
-                bat './gradlew build'
+                	gradlew build
             }
         }
         
         stage('Test') {
             steps {
-                bat './gradlew test'
+                	gradlew test
             }
         }
         
         stage('Check') {
             steps {
-                bat './gradlew check'
+             		gradlew check
             }
         }      
 		
