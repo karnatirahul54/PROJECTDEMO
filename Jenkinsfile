@@ -15,21 +15,16 @@ pipeline {
 		
 		stage('Build') {
             steps {
-                	gradlew build
+                	sh 'mvn -B -DskipTests clean package'
             }
         }
         
         stage('Test') {
             steps {
-                	gradlew test
+                	sh 'mvn test'
             }
         }
-        
-        stage('Check') {
-            steps {
-             		gradlew check
-            }
-        }      
+   
 		
 		stage('Five') {
 			steps {
